@@ -3,13 +3,17 @@ from src.parsers.stats_parser import DatasetStatsParser
 from src.parsers.stats_parser import load_data
 from pathlib import Path
 
-def build_interface(dataset_df):
-    parser = DatasetStatsParser(dataset_df)
+BASE_DIR = Path(__file__).resolve().parent.parent
+RESULTS_PATH = BASE_DIR / "data_analysis_results"
+dataset_df = load_data(RESULTS_PATH)
 
-    speakers = ["all"] + sorted(dataset_df["name"].unique().tolist())
-    emotions = list(parser.emotion_colors.keys())
 
-    with gr.Blocks() as demo:
+parser = DatasetStatsParser(dataset_df)
+
+speakers = ["all"] + sorted(dataset_df["name"].unique().tolist())
+emotions = list(parser.emotion_colors.keys())
+
+with gr.Blocks() as demo:
         with gr.Tabs():
 
             # -------- TAB 1 --------
@@ -119,12 +123,7 @@ def build_interface(dataset_df):
             outputs=[plot_emotions, region_plot, age_plot, gender_plot, gender_emotions_plot]
         )
 
-    return demo
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-RESULTS_PATH = BASE_DIR / "data_analysis_results"
-dataset_df = load_data(RESULTS_PATH)
-
-demo = build_interface(dataset_df)
 demo.launch()
+
+
+

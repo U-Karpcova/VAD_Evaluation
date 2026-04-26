@@ -1,4 +1,4 @@
-from base_vad import VAD_Model
+from src.models.base_vad import VAD_Model
 import numpy as np
 from ten_vad import TenVad
 

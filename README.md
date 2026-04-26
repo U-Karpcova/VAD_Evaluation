@@ -2,7 +2,7 @@
 VAD Models Evaluation and Data Analysis project
 
 ## Run pipeline
-python src/pipeline/run_pipeline.py
+python -m src.pipeline.run_pipeline
 
 ## Run UI
 python app/gradio_app.py

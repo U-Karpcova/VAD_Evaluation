@@ -1,4 +1,4 @@
-from base_vad import VAD_Model
+from src.models.base_vad import VAD_Model
 from silero_vad import load_silero_vad, read_audio, get_speech_timestamps
 
 

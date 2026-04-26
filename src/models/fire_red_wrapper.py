@@ -1,4 +1,4 @@
-from base_vad import VAD_Model
+from src.models.base_vad import VAD_Model
 from fireredvad import FireRedVad, FireRedVadConfig
 
 class FireRed_VAD_MODEL(VAD_Model):

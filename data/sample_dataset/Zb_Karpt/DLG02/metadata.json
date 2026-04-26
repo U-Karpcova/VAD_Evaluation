@@ -1,0 +1,22 @@
+{
+  "spk_id": "Zb_Karpt",
+  "dlg_id": "DLG02",
+  "author": "Карпцова Юліана",
+  "partner": "Мозгова Анастасія",
+  "speaker_a": { "role": "author", "sex": "F", "age_approx": 21, "region": "Полтава" },
+  "speaker_b": { "role": "partner", "sex": "F", "age_approx": 21, "region": "Київ" },
+  "emotions": ["роздратування", "розчарування", "обурення", "образа"],
+  "overlap_count": 6,
+  "selected_take": 1,
+  "take_selection_reason": "більше перекривань, більш емоційне мовлення, менше кліпінгу на записі MIC1",
+  "devices": {
+    "MIC1": "Lenovo 82KA вбудований мікрофон",
+    "MIC2": "ASUS ExpertBook B1 вбудований мікрофон",
+    "MIC3": "Galaxy A14 EA81 вбудований мікрофон"
+  },
+  "sample_rate_hz": 44100,
+  "bit_depth": 16,
+  "recording_environment": "аудиторія, тихо, день",
+  "date": "2026-03-18",
+  "duration_sec": 93
+}

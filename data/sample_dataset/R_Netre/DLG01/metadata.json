@@ -1,0 +1,22 @@
+{
+  "spk_id": "R_Netre",
+  "dlg_id": "DLG01",
+  "author": "Нетреба Анна",
+  "partner": "Шефер Поліна",
+  "speaker_a": { "role": "author", "sex": "F", "age_approx": 20, "region": "Київ" },
+  "speaker_b": { "role": "partner", "sex": "F", "age_approx": 21, "region": "Одеса" },
+  "emotions": ["розчарування", "досада", "виправдання"],
+  "overlap_count": 4,
+  "selected_take": 2,
+  "take_selection_reason": "чіткіший запис, без запинок",
+  "devices": {
+    "MIC1": "iPad 9 вбудований мікрофон",
+    "MIC2": "Asus X515FAC вбудований мікрофон",
+    "MIC3": "MacBook Air 13 вбудований мікрофон"
+  },
+  "sample_rate_hz": 44100,
+  "bit_depth": 16,
+  "recording_environment": "квартира, тихо, вечір",
+  "date": "2026-03-20",
+  "duration_sec": 90
+}

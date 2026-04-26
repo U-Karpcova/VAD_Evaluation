@@ -1,0 +1,26 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 102.03922902494331 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "clap-sync" 
+        xmin = 0 
+        xmax = 102.03922902494331 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 5.0752019779203765 
+            text = "" 
+        intervals [2]:
+            xmin = 5.0752019779203765 
+            xmax = 5.279194576979922 
+            text = "clap" 
+        intervals [3]:
+            xmin = 5.279194576979922 
+            xmax = 102.03922902494331 
+            text = "" 

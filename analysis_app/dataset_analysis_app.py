@@ -112,16 +112,16 @@ with gr.Blocks() as demo:
 
 
                 # initial load
-                demo.load(
-                    fn=lambda: (
-                        parser.plot_emotions("all", "count"),
-                        parser.plot_regions("count"),
-                        parser.plot_age("count"),
-                        parser.plot_gender("count"),
-                        parser.plot_emotions_by_gender("count"),
-                        ),
-                    outputs=[plot_emotions, region_plot, age_plot, gender_plot, gender_emotions_plot]
-                    )
+                # demo.load(
+                #     fn=lambda: (
+                #         parser.plot_emotions("all", "count"),
+                #         parser.plot_regions("count"),
+                #         parser.plot_age("count"),
+                #         parser.plot_gender("count"),
+                #         parser.plot_emotions_by_gender("count"),
+                #         ),
+                #     outputs=[plot_emotions, region_plot, age_plot, gender_plot, gender_emotions_plot]
+                #     )
 
 demo.launch()
 

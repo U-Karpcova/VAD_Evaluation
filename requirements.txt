@@ -1,15 +1,16 @@
 gradio
 pandas
 plotly
-numpy
+numpy < 2
 
 praatio
 soundfile
 librosa
 
-torch
-torchaudio
+torch #
+torchaudio #
 huggingface_hub
+onnxruntime
 
 silero-vad
 fireredvad

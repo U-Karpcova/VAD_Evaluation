@@ -1,10 +1,10 @@
 from src.models.base_vad import VAD_Model
 from silero_vad import load_silero_vad, read_audio, get_speech_timestamps
 
-
 class Silero_Model(VAD_Model):
   def __init__(self) -> None:
-      self.model = load_silero_vad()
+      model_path = 'src/models/pretrained/silero_vad.jit'
+      self.model = load_silero_vad(model_path)
       self.name = "silero_vad"
       self.reqired_sr = 16000
 

@@ -1,0 +1,14 @@
+gradio
+pandas
+plotly
+numpy
+
+praatio
+soundfile
+librosa
+
+silero-vad
+libc++1 
+libc++abi1
+fireredvad
+ten_vad

@@ -123,7 +123,7 @@ def build_interface(dataset_df):
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-RESULTS_PATH = BASE_DIR / "data_analysis_results" / "Exploratory_Data_Analysis.json"
+RESULTS_PATH = BASE_DIR / "data_analysis_results"
 dataset_df = load_data(RESULTS_PATH)
 
 demo = build_interface(dataset_df)

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from collections import defaultdict
 import plotly.express as px
@@ -5,9 +6,10 @@ import plotly.graph_objects as go
 import json
 
 def load_data(file_path):
-    if file_path.endswith(".json"):
-        with open(file_path, "r") as f:
-            json_data = json.load(f)
+    for file in os.listdir(file_path):
+        if file.endswith(".json"):
+            with open(os.path.join(file_path, file), "r") as f:
+                json_data = json.load(f)
     return pd.DataFrame(data=json_data)
 
 class DatasetStatsParser():

@@ -7,8 +7,10 @@ praatio
 soundfile
 librosa
 
+torch
+torchaudio
+huggingface_hub
+
 silero-vad
-libc++1 
-libc++abi1
 fireredvad
 ten_vad

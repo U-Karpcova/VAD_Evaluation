@@ -1,6 +1,11 @@
 from src.models.base_vad import VAD_Model
 from fireredvad import FireRedVad, FireRedVadConfig
 
+from huggingface_hub import snapshot_download
+snapshot_download(
+    repo_id="FireRedTeam/FireRedVAD",
+    local_dir="pretrained_models/FireRedVAD"
+)
 class FireRed_VAD_MODEL(VAD_Model):
   def __init__(self) -> None:
     vad_config = FireRedVadConfig(

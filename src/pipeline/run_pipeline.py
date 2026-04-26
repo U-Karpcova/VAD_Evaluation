@@ -1,8 +1,8 @@
 from src.parsers.textgrid_parser import TextGrid_Parser
 from src.metrics.vad_metrics import VAD_Metrics
 from src.data.data_extractor import Data_Extractor
-from src.models.ten_vad_wrapper import TEN_VAD_MODEL
-from src.models.fire_red_wrapper import FireRed_VAD_MODEL
+# from src.models.ten_vad_wrapper import TEN_VAD_MODEL
+# from src.models.fire_red_wrapper import FireRed_VAD_MODEL
 from src.models.silero_wrapper import Silero_Model
 
 import pandas as pd
@@ -43,7 +43,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 RESULTS_PATH = BASE_DIR / "results"
 DATA_PATH = BASE_DIR / "data" / "sample_dataset"
 
-vad_models = [Silero_Model(), TEN_VAD_MODEL(), FireRed_VAD_MODEL()]
+vad_models = [Silero_Model(),] # TEN_VAD_MODEL(), FireRed_VAD_MODEL()
 
 extractor = Data_Extractor(DATA_PATH)
 dataset_df, _ = extractor.collect_vad_dataset()

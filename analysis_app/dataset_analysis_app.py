@@ -127,4 +127,4 @@ RESULTS_PATH = BASE_DIR / "data_analysis_results"
 dataset_df = load_data(RESULTS_PATH)
 
 demo = build_interface(dataset_df)
-demo.launch(share=True)
+demo.launch()

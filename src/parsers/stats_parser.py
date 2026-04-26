@@ -1,9 +1,9 @@
-import os
 import pandas as pd
 from collections import defaultdict
 import plotly.express as px
 import plotly.graph_objects as go
 import json
+import os
 
 def load_data(file_path):
     for file in os.listdir(file_path):
@@ -11,6 +11,7 @@ def load_data(file_path):
             with open(os.path.join(file_path, file), "r") as f:
                 json_data = json.load(f)
     return pd.DataFrame(data=json_data)
+
 
 class DatasetStatsParser():
     def __init__(self, dataset_df) -> None:
@@ -60,8 +61,8 @@ class DatasetStatsParser():
             if speaker != "all" and row["name"] != speaker:
                 continue
 
-            for wav_path, segments in row["pairs"]:
-                for seg in segments:
+            for segment in row["pairs"]:
+                for seg in segment:
                     emo = self.__extract_emotion_name(seg.get("emotion"))
                     if emo and emo in self.emotion_name.values():
 
@@ -104,8 +105,8 @@ class DatasetStatsParser():
         for _, row in self.dataset_df.iterrows():
             speaker = row["name"]
 
-            for wav_path, segments in row["pairs"]:
-                for seg in segments:
+            for segment in row["pairs"]:
+                for seg in segment:
                     emo = self.__extract_emotion_name(seg.get("emotion"))
 
                     if emo != emotion:
@@ -159,12 +160,12 @@ class DatasetStatsParser():
 
             region = meta["region"]
 
-            for wav_path, segments in row["pairs"]:
+            for segment in row["pairs"]:
                 if mode == "count":
                     stats[region] += 1
                 else:
-                    if segments:
-                        duration = segments[-1]["end"]
+                    if segment:
+                        duration = segment[-1]["end"]
                         stats[region] += duration
 
         return pd.DataFrame({
@@ -183,12 +184,12 @@ class DatasetStatsParser():
 
             age = meta["age_approx"]
 
-            for wav_path, segments in row["pairs"]:
+            for segment in row["pairs"]:
                 if mode == "count":
                     stats[age] += 1
                 else:
-                    if segments:
-                        duration = segments[-1]["end"]
+                    if segment:
+                        duration = segment[-1]["end"]
                         stats[age] += duration
 
         return pd.DataFrame({
@@ -207,12 +208,12 @@ class DatasetStatsParser():
 
             sex = meta["sex"]
 
-            for wav_path, segments in row["pairs"]:
+            for segment in row["pairs"]:
                 if mode == "count":
                     stats[sex] += 1
                 else:
-                    if segments:
-                        duration = segments[-1]["end"]
+                    if segment:
+                        duration = segment[-1]["end"]
                         stats[sex] += duration
 
         return pd.DataFrame({
@@ -231,8 +232,8 @@ class DatasetStatsParser():
 
             gender = meta["sex"]
 
-            for _, segments in row["pairs"]:
-                for seg in segments:
+            for segment in row["pairs"]:
+                for seg in segment:
                     emo = self.__extract_emotion_name(seg.get("emotion"))
                     if not emo:
                         continue
@@ -315,4 +316,3 @@ class DatasetStatsParser():
         )
 
         return fig
-

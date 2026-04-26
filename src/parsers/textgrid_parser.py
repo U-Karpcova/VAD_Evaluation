@@ -8,8 +8,8 @@ class TextGrid_Parser():
   def extract_speech_segments(self, textgrid_path) -> list:
     """
     Витягує із файлу TextGrid сегменти мовлення кожного мовця
-    start, end, speaker, text, emotion
-    вигляд елемента: {'start': 10.5449, 'end': 13.3828, 'speaker': 'speaker_1', 'text': 'У нас знову...', 'emotion': 'an2'}
+    start, end, speaker, emotion
+    вигляд елемента: {'start': 10.5449, 'end': 13.3828, 'speaker': 'speaker_1', 'emotion': 'an2'}
     """
     tg = textgrid.openTextgrid(textgrid_path, includeEmptyIntervals=True)
 
@@ -32,7 +32,7 @@ class TextGrid_Parser():
                     "start": start,
                     "end": end,
                     "speaker": speaker,
-                    "text": text,
+                    # "text": text,
                     "emotion": emotion
                   })
 

@@ -15,7 +15,7 @@ dataset_df, _ = extractor.collect_vad_dataset()
 # excluded_ids=["Zb_Mozgh", ]
 # speaker_ids=['Zb_Karpt', 'R_Fysyn']
 
-dataset_df['pairs'] = dataset_df['pairs'].apply(lambda pairs_list: [(wav, textgrid_parser.extract_speech_segments(tg)) for (wav, tg) in pairs_list])
+dataset_df['pairs'] = dataset_df['pairs'].apply(lambda pairs_list: [textgrid_parser.extract_speech_segments(tg) for (wav, tg) in pairs_list])
 
 today = datetime.now().strftime("%d-%m-%Y")
 save_path = f'{RESULTS_PATH}/Exploratory_Data_Analysis_{today}.json'

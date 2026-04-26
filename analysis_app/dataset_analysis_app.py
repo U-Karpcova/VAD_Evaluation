@@ -122,9 +122,9 @@ def build_interface(dataset_df):
     return demo
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 RESULTS_PATH = BASE_DIR / "data_analysis_results" / "Exploratory_Data_Analysis.json"
 dataset_df = load_data(RESULTS_PATH)
 
 demo = build_interface(dataset_df)
-demo.launch()
+demo.launch(share=True)

@@ -19,7 +19,7 @@ def load_metrics(folder_path):
     return data
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 RESULTS_PATH = BASE_DIR / "vad_results"
 
 metrics_data = load_metrics(RESULTS_PATH)
@@ -199,4 +199,4 @@ with gr.Blocks() as demo:
             )
 
 
-demo.launch()
+demo.launch(share=True)

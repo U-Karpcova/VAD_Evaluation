@@ -40,7 +40,7 @@ def run_vad_pipeline(dataset_df, vad_model, textgrid_parser, evaluator):
   return metrics_df
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-RESULTS_PATH = BASE_DIR / "results"
+RESULTS_PATH = BASE_DIR / "vad_results"
 DATA_PATH = BASE_DIR / "data" / "sample_dataset"
 
 vad_models = [Silero_Model(),] # TEN_VAD_MODEL(), FireRed_VAD_MODEL()

@@ -10,3 +10,7 @@ python -m src.pipeline.run_pipeline
 
 ## Run UI
 python app/gradio_app.py
+
+## Run dataset analysis
+pip install -r requirements.txt
+python -m src.dataset_analysis.analysis_script

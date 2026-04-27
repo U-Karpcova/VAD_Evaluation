@@ -12,6 +12,10 @@ from datetime import datetime
 textgrid_parser = TextGrid_Parser()
 evaluator = VAD_Metrics()
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+RESULTS_PATH = BASE_DIR / "vad_results"
+DATA_PATH = BASE_DIR / "data" / "sample_dataset"
+
 def run_vad_pipeline(dataset_df, vad_model, textgrid_parser, evaluator):
 
   df = dataset_df.copy()
@@ -38,10 +42,6 @@ def run_vad_pipeline(dataset_df, vad_model, textgrid_parser, evaluator):
   metrics_df.to_json(output_file)
 
   return metrics_df
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-RESULTS_PATH = BASE_DIR / "vad_results"
-DATA_PATH = BASE_DIR / "data" / "sample_dataset"
 
 vad_models = [Silero_Model(),] # TEN_VAD_MODEL(), FireRed_VAD_MODEL()
 

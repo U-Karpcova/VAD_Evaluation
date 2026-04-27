@@ -11,12 +11,4 @@ pip install -r requirements.txt
 python -m src.pipeline.run_pipeline
 
 ## Run VAD Results UI
-python -m vad_app.vad_gradio_app
-
-## Run Dataset Analysis
-pip install -r requirements.txt 
-
-python -m src.dataset_analysis.analysis_script
-
-## Run Dataset Analysis UI
-python -m analysis_app.dataset_analysis_app
+python -m app.run

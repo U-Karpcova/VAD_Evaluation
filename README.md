@@ -1,5 +1,5 @@
 # VAD_Evaluation
-VAD Models Evaluation and Data Analysis project
+VAD Models Evaluation project
 
 Python 3.10
 
